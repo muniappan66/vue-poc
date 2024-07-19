@@ -1,0 +1,48 @@
+{
+  "products": [
+    {
+      "AssignedCss": "Test data 1",
+      "id": "11111",
+      "ClientName": "Cognizant Company",
+      "CertificateId": "1234567",
+      "MemberName": "Gordie Lamy",
+      "MemberFirstName": "Gordie",
+      "MemberLastName": "Lamy",
+      "SIN": "567-789-1234",
+      "clientId": "111"
+    },
+    {
+      "AssignedCss": "Test data 2",
+      "id": "22222",
+      "ClientName": "TCS Company",
+      "CertificateId": "1234567",
+      "MemberName": "Tom Moody",
+      "MemberFirstName": "Tom",
+      "MemberLastName": "Moody",
+      "SIN": "567-789-1234",
+      "clientId": "222"
+    },
+    {
+      "AssignedCss": "Test data 3",
+      "id": "33333",
+      "ClientName": "Infosys Company",
+      "CertificateId": "1234567",
+      "MemberName": "Kumar Sangakkara",
+      "MemberFirstName": "Kumar",
+      "MemberLastName": "Sangakkara",
+      "SIN": "567-789-1234",
+      "clientId": "333"
+    },
+    {
+      "AssignedCss": "Test data 4",
+      "id": "44444",
+      "ClientName": "L&T Company",
+      "CertificateId": "1234567",
+      "MemberName": "Wasim Akram",
+      "MemberFirstName": "Wasim",
+      "MemberLastName": "Akram",
+      "SIN": "567-789-1234",
+      "clientId": "444"
+    }
+  ]
+}
