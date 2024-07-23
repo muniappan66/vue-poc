@@ -1,12 +1,5 @@
 <template>
-
-
     <div class="container mt-3 bg-light">
-        <!-- <div class="">
-            <h4>
-                Case Component
-            </h4>
-        </div> -->
         <div class="">
             <img src="../assets/canada-life-logo.svg" alt="canada-life-logo" width="130px" height="100px">
         </div>

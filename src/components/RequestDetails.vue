@@ -6,9 +6,7 @@ const customerData = ref([]);
 
 onMounted(async () => {
     try {
-        // const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
         const response = await axios.get('api/products/3');
-        // state.todos = response.data;
         customerData.value = response.data;
     } catch (error) {
         console.error('Error fetching tods', error);
