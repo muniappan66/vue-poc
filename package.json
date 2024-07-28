@@ -17,6 +17,7 @@
     "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "json-server": "^1.0.0-beta.1",
+    "pinia": "^2.2.0",
     "vue": "^3.4.29",
     "vue-axios": "^3.5.2",
     "vue-router": "^4.4.0"

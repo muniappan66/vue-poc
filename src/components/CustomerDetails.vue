@@ -3,6 +3,10 @@ import axios from 'axios'
 import { reactive, onMounted, defineProps, toRaw } from 'vue'
 import { ref } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { useCustomerStore } from '../stores/customerstore'
+
+const storeCustomer = useCustomerStore()
+
 const customerData = reactive({
     response: {
     }
@@ -19,16 +23,22 @@ const errorResponse = reactive({
 });
 const modalPopUpFunction = () => {
     console.log('modalPopUpFunction');
-    const cusData = toRaw(customerData);
-    if (Object.keys(cusData.response).length === 0 || cusData.response === undefined || cusData.response === null) {
+    // const cusData = toRaw(customerData);
+    // if (Object.keys(cusData.response).length === 0 || cusData.response === undefined || cusData.response === null) {
+    //     modalData.response = {};
+    //     modalData.id = '';
+    // }
+    if (Object.keys(storeCustomer.customerData).length === 0 || cusData.response === undefined || cusData.response === null) {
         modalData.response = {};
-        modalData.id = '';
+        modalData.id = ''
     }
 
 }
 
 const submitData = () => {
-    customerData.response = modalData.response
+    // customerData.response = modalData.response
+    //  storeCustomer.customerData = customerData.response;
+    storeCustomer.customerData = modalData.response;
     console.log('submitData');
 }
 
@@ -71,17 +81,16 @@ const closePopUp = (async () => {
 
     </div>
 
+    <!--- --->
+
     <div class="mt-2 mb-4 p-5 bg-white text-dark rounded border-css">
-
-
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-3"><strong>Client ID: </strong>{{ customerData.response.clientId }}</div>
             <div class="col-3"><strong>Certificate Id: </strong>{{ customerData.response.CertificateId }}</div>
             <div class="col-3"><strong>Assigned CSS: </strong>{{ customerData.response.AssignedCss }}</div>
             <div class="col-3">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" @click="modalPopUpFunction">Edit</a>
             </div>
-
         </div>
         <div class="row">
             <div class="col-3"><strong>Client Name: </strong>{{ customerData.response.ClientName }} </div>
@@ -91,8 +100,24 @@ const closePopUp = (async () => {
         <div class="row ">
             <div class="col-3"></div>
             <div class="col-3"><strong>SIN: </strong>{{ customerData.response.SIN }} </div>
+        </div> -->
+        <div class="row">
+            <div class="col-3"><strong>Client ID: </strong>{{ storeCustomer.customerData.clientId }}</div>
+            <div class="col-3"><strong>Certificate Id: </strong>{{ storeCustomer.customerData.CertificateId }}</div>
+            <div class="col-3"><strong>Assigned CSS: </strong>{{ storeCustomer.customerData.AssignedCss }}</div>
+            <div class="col-3">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal" @click="modalPopUpFunction">Edit</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3"><strong>Client Name: </strong>{{ storeCustomer.customerData.ClientName }} </div>
+            <div class="col-3"><strong>Member Name:</strong> {{ storeCustomer.customerData.MemberName }} </div>
         </div>
 
+        <div class="row ">
+            <div class="col-3"></div>
+            <div class="col-3"><strong>SIN: </strong>{{ storeCustomer.customerData.SIN }} </div>
+        </div>
 
     </div>
 
